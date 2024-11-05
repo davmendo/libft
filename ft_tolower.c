@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (c >= 'A' && c <= 'Z')
 	{
 		return (c += 32);
 	}
@@ -23,3 +23,11 @@ int	ft_tolower(int c)
 		return (c);
 	}
 }
+/*
+int	main(void)
+{
+	char str[] = "davmendo";
+	ft_tolower(str);
+	printf("%s", str);
+}
+*/

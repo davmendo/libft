@@ -6,7 +6,7 @@
 /*   By: davmendo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 23:09:19 by davmendo          #+#    #+#             */
-/*   Updated: 2024/10/28 20:36:12 by davmendo         ###   ########.fr       */
+/*   Updated: 2024/11/01 20:54:08 by davmendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		return ((char *)s);
 	}
-	return (0);
+	return (NULL);
 }
 /*
 void test_strchr(const char *str, int c) {
