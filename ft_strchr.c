@@ -6,7 +6,7 @@
 /*   By: davmendo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 23:09:19 by davmendo          #+#    #+#             */
-/*   Updated: 2024/11/01 20:54:08 by davmendo         ###   ########.fr       */
+/*   Updated: 2024/11/09 22:38:29 by davmendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,27 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	return (ft_memchr(s, c, ft_strlen(s) + 1));
+}
+
+/*
+char	*ft_strchr(const char *s, int c)
+{
 	while (*s)
 	{
 		if (*s == c)
 		{
-			return ((char *)s);
+			return ((unsigned char *)s);
 		}
 		s++;
 	}
 	if (c == '\0')
 	{
-		return ((char *)s);
+		return ((unsigned char *)s);
 	}
 	return (NULL);
 }
-/*
+
 void test_strchr(const char *str, int c) {
     char *result = ft_strchr(str, c);
 

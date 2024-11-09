@@ -6,7 +6,7 @@
 /*   By: davmendo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 00:19:27 by davmendo          #+#    #+#             */
-/*   Updated: 2024/10/28 20:34:25 by davmendo         ###   ########.fr       */
+/*   Updated: 2024/11/09 22:24:11 by davmendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last = NULL;
+	const char		*last;
+	unsigned char	ch;
 
+	ch = (unsigned char)c;
+	last = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == ch)
 		{
 			last = s;
 		}
 		s++;
 	}
-	if (c == '\0')
+	if (ch == '\0')
 	{
 		return ((char *)s);
 	}

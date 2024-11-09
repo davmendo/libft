@@ -6,7 +6,7 @@
 #    By: davmendo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/24 21:03:07 by davmendo          #+#    #+#              #
-#    Updated: 2024/11/05 18:49:11 by davmendo         ###   ########.fr        #
+#    Updated: 2024/11/09 22:06:31 by davmendo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,11 +43,20 @@ SRCS = ft_isalpha.c \
        ft_strtrim.c \
        ft_putendl_fd.c \
        ft_split.c \
-       # ft_itoa.c \
-       # ft_putnbr_fd.c \
-       # ft_strmapi.c \
-       # ft_striteri.c
-# BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+       ft_putnbr_fd.c \
+       ft_itoa.c \
+       ft_strmapi.c \
+       ft_striteri.c
+
+BONUS_SRCS = ft_lstnew.c \
+	     ft_lstadd_front.c \
+	     ft_lstsize.c \
+	     ft_lstlast.c \
+	     ft_lstadd_back.c \
+	     ft_lstdelone.c \
+	     ft_lstclear.c \
+	     ft_lstiter.c \
+	     ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)

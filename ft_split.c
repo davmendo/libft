@@ -6,7 +6,7 @@
 /*   By: davmendo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 18:46:40 by davmendo          #+#    #+#             */
-/*   Updated: 2024/11/05 20:52:13 by davmendo         ###   ########.fr       */
+/*   Updated: 2024/11/06 18:57:24 by davmendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,10 @@ static int	ft_allocate_and_fill(char **result, char const *s, char c)
 				i++;
 			result[j] = ft_substr(s, start, i - start);
 			if (!result[j++])
+			{
 				ft_free_all(result, j);
-			j++;
+				return (0);
+			}
 		}
 		else
 			i++;
@@ -95,7 +97,6 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	if (!ft_allocate_and_fill(result, s, c))
 	{
-		free(result);
 		return (NULL);
 	}
 	return (result);
