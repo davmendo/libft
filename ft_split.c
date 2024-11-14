@@ -6,7 +6,7 @@
 /*   By: davmendo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 18:46:40 by davmendo          #+#    #+#             */
-/*   Updated: 2024/11/06 18:57:24 by davmendo         ###   ########.fr       */
+/*   Updated: 2024/11/11 19:28:53 by davmendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,18 +104,31 @@ char	**ft_split(char const *s, char c)
 /*
 int main(void)
 {
-    char **split_result;
-    char *s = "Hello world example";
-    char c = ' ';
+    char **result;
+    char *str = "Hello world 42";
+    char delimiter = ' ';
+    int i = 0;
 
-    split_result = ft_split(s, c);
+    result = ft_split(str, delimiter);
 
-    for (int i = 0; split_result[i] != NULL; i++)
+    if (!result)	
     {
-        printf("%s\n", split_result[i]);
-        free(split_result[i]); // Liberar memória de cada substring
+        printf("Error allocating memory for ft_split\n");
     }
-    free(split_result); // Liberar o array de ponteiros
+
+    while (result[i])
+    {
+        printf("Substring [%d]: %s\n", i, result[i]);
+        i++;
+    }
+
+    i = 0;
+    while (result[i])
+    {
+        free(result[i]);
+        i++;
+    }
+    free(result);
 
     return (0);
 }

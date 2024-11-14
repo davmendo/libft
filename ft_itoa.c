@@ -55,15 +55,33 @@ char	*ft_itoa(int n)
 /*
 int main(void)
 {
-	int	i = 69;
-	int	j = -420;
-	int	min = -2147483648;
-	int	max = 2147483647;
+    	int test_number;
+    	char *result;
+    
+    	test_number = 1234;
+    	result = ft_itoa(test_number);
+    	if (result)
+    	{	
+        	printf("result: (%d): %s\n", test_number, result);
+        	free(result);
+    	}
 
-	ft_putendl_fd(ft_itoa(i), 1);
-	ft_putendl_fd(ft_itoa(j), 1);
-	ft_putendl_fd(ft_itoa(min), 1);
-	ft_putendl_fd(ft_itoa(max), 1);
-	return (0);
+    	test_number = -5678;
+    	result = ft_itoa(test_number);
+    	if (result)
+    	{
+        	printf("result: ft_itoa(%d): %s\n", test_number, result);
+        	free(result);
+    	}
+    	
+    	test_number = 0;
+    	result = ft_itoa(test_number);
+    	if (result)
+    	{
+        	printf("result: ft_itoa(%d): %s\n", test_number, result);
+        	free(result);
+    	}
+
+    	return (0);
 }
 */

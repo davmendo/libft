@@ -24,15 +24,28 @@ int	ft_isalnum(int c)
 	}
 }
 /*
-int     main(void)
+int main(void)
 {
-        int     i = 0;
-        char c[] = "123456789asdbcderASDVWERGRTH_";
+	char test_char;
+	
+	test_char = 'A';
+	if (ft_isalnum(test_char))
+		ft_putstr_fd("'A' alphanumeric\n", 1);
+	else
+		ft_putstr_fd("'A' not alphanumeric\n", 1);
+	
+	test_char = '!';
+	if (ft_isalnum(test_char))
+        	ft_putstr_fd("'!' alphanumeric\n", 1);
+        else
+        	ft_putstr_fd("'!' not alphanumeric\n", 1);
 
-        while(c[i])
-        {
-                printf("Character: %c, Is Alpha: %d\n", c[i], ft_isalnum(c[i]));
-                i++;
-        }
+	test_char = '9';
+    		if (ft_isalnum(test_char))
+        ft_putstr_fd("'9' alphanumeric\n", 1);
+    		else
+        ft_putstr_fd("'9' not alphanumeric\n", 1);
+        
+        return (0);
 }
 */

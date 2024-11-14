@@ -35,38 +35,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (i + ft_strlen(src));
 }
 /*
-void test_strlcat() {
-    char dest1[50] = "Hello, ";
-    char src1[] = "World!";
-    size_t result1 = ft_strlcat(dest1, src1, sizeof(dest1));
+int main(void)
+{
+    	char buffer1[30] = "Hello";
+    	const char *source = " World!";
 
-    // Resetting dest1 ddfor the next test
-    strcpy(dest1, "Hello, ");
-    char src2[] = "42";
-    size_t result2 = ft_strlcat(dest1, src2, sizeof(dest1));
-
-    // Test with a buffer that's too small
-    char dest3[10] = "Hello";
-    char src3[] = " World!";
-    size_t result3 = ft_strlcat(dest3, src3, sizeof(dest3));
-
-    // Test with empty source
-    char dest4[20] = "Original";
-    char src4[] = "";
-    size_t result4 = ft_strlcat(dest4, src4, sizeof(dest4));
-
-    // Test with zero length
-    char dest5[20] = "Initial";
-    size_t result5 = ft_strlcat(dest5, src4, 0);
-
-    // Test with both strings being empty
-    char dest6[20] = "";
-    char src6[] = "";
-    size_t result6 = ft_strlcat(dest6, src6, sizeof(dest6));
-}
-
-int main() {
-    test_strlcat();
-    return 0;
+    	printf("after ft_strlcat: \"%s\"\n", buffer1);
+    	size_t result1 = ft_strlcat(buffer1, source, sizeof(buffer1));
+    	printf("before ft_strlcat: \"%s\"\n", buffer1);
+    	printf("final length (ft_strlcat): %zu\n", result1);
+    	return (0);
 }
 */

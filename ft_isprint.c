@@ -24,15 +24,28 @@ int	ft_isprint(int c)
 	}
 }
 /*
-int     main(void)
+int main(void)
 {
-        int     i = 0;
-        char c[] = " 123456789asdbcderASDVWERGRTH_";
+    	int test_char;
+    
+    	test_char = 'A';
+    	if (ft_isprint(test_char))
+        	ft_putstr_fd("'A' is a printable character\n", 1);
+    	else
+        	ft_putstr_fd("'A' is not a printable character.\n", 1);
 
-        while(c[i])
-        {
-                printf("Character: %c, Is Alpha: %d\n", c[i], ft_isprint(c[i]));
-                i++;
-        }
+    	test_char = '\t';
+    	if (ft_isprint(test_char))
+        	ft_putstr_fd("'\\t' is a printable character\n", 1);
+    	else
+       		ft_putstr_fd("'\\t' is not a printable character.\n", 1);
+        
+    	test_char = ' ';
+    	if (ft_isprint(test_char))
+        	ft_putstr_fd("' ' is a printable character\n", 1);
+    	else
+        	ft_putstr_fd("' ' is not a printable character.\n", 1);
+
+    	return (0);
 }
 */

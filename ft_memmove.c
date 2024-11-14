@@ -39,54 +39,18 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	unsigned char		*d;
-	const unsigned char	*s;
-
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	if (d < s || d >= (s + n))
-	{
-		while (n--)
-		{
-			*d++ = *s++;
-		}
-	}
-	else
-	{
-		d = d + n;
-		s = s + n;
-		while (n-- > 0)
-		{
-			*(--d) = *(--s);
-		}
-	}
-	return (dest);
-}
-
 int main(void)
 {
-    char str1[20] = "Hello, World!";
-    char str2[20] = "Overlapping";
+    char buffer1[30] = "1234567890abcdefghij";
+    char buffer2[30] = "1234567890abcdefghij";
 
-    // Teste normal
-    printf("Before memmove: %s\n", str1);
-    memmove(str1 + 7, str1, 13); // Copia "Hello, World!" para a parte final
-    printf("After memmove: %s\n", str1);
+    printf("before: %s\n", buffer1);
+    ft_memmove(buffer1 + 5, buffer1, 10); 
+    printf("after: %s\n", buffer1);
 
-    printf("Before ft_memmove: %s\n", str1);
-    ft_memmove(str1 + 7, str1, 13); // Copia "Hello, World!" para a parte final
-    printf("After ft_memmove: %s\n", str1);
-
-    // Teste de sobreposição
-    printf("Before overlapping memmove: %s\n", str2);
-    memmove(str2 + 3, str2, 11); // "Overlapping" para "laplapping"
-    printf("After overlapping memmove: %s\n", str2);
-
-    printf("Before overlapping ft_memmove: %s\n", str2);
-    ft_memmove(str2 + 3, str2, 11); // "Overlapping" para "laplapping"
-    printf("After overlapping ft_memmove: %s\n", str2);
+    printf("\nbefore: %s\n", buffer2);
+    ft_memcpy(buffer2 + 5, buffer2, 10);  
+    printf("after: %s\n", buffer2);
 
     return 0;
 }

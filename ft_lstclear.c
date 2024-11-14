@@ -6,7 +6,7 @@
 /*   By: davmendo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 21:53:22 by davmendo          #+#    #+#             */
-/*   Updated: 2024/11/09 22:24:57 by davmendo         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:44:34 by davmendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,20 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
+/*
+int main(void)
+{
+    t_list *head = ft_lstnew(ft_strdup("Hello"));
+    t_list *node2 = ft_lstnew(ft_strdup("World"));
+
+    if (!head || !node2)
+    {
+        printf("error\n");
+    }
+
+    ft_lstadd_back(&head, node2);
+    ft_lstclear(&head, free);
+
+    return (0);
+}
+*/	

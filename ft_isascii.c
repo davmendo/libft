@@ -24,15 +24,30 @@ int	ft_isascii(int c)
 	}
 }
 /*
-int     main(void)
+int main(void)
 {
-        int     i = 0;
-        char c[] = "123456789asdbcderASDVWERGRTH_";
+    	int test_char;
 
-        while(c[i])
-        {
-                printf("Character: %c, Is Alpha: %d\n", c[i], ft_isascii(c[i]));
-                i++;
-        }
+    	test_char = 'A';
+    	if (ft_isascii(test_char))
+        	ft_putstr_fd("'A' is an ASCII character\n", 1);
+   	else
+        	ft_putstr_fd("'A' is not an ASCII character\n", 1);
+
+
+    	test_char = 200;
+    	if (ft_isascii(test_char))
+        	ft_putstr_fd("200 is an ASCII character\n", 1);
+    	else
+        	ft_putstr_fd("200 is not an ASCII character\n", 1);
+
+
+    	test_char = '5';
+    	if (ft_isascii(test_char))
+        	ft_putstr_fd("'5' is an ASCII character\n", 1);
+    	else
+        	ft_putstr_fd("'5' is not an ASCII character\n", 1);
+
+    	return (0);
 }
 */

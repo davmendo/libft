@@ -24,15 +24,28 @@ int	ft_isdigit(int c)
 	}
 }
 /*
-int     main(void)
+int main(void)
 {
-        int     i = 0;
-        char c[] = "123456789asdbcderASDVWERGRTH_";
+    	int test_char;
 
-        while(c[i])
-        {
-                printf("Character: %c, Is Alpha: %d\n", c[i], ft_isdigit(c[i]));
-                i++;
-        }
+    	test_char = '5';
+    	if (ft_isdigit(test_char))
+        	ft_putstr_fd("'5' is a digit\n", 1);
+    	else
+        	ft_putstr_fd("'5' is not a digit\n", 1);
+
+    	test_char = 'A';
+    	if (ft_isdigit(test_char))
+        	ft_putstr_fd("'A' is a digit\n", 1);
+    	else
+        	ft_putstr_fd("'A' is not a digit\n", 1);
+
+    	test_char = '0';
+    	if (ft_isdigit(test_char))
+        	ft_putstr_fd("'0' is a digit\n", 1);
+    	else
+        	ft_putstr_fd("'0' is not a digit\n", 1);
+        	
+        return (0);
 }
 */

@@ -37,49 +37,21 @@ char	*ft_strdup(const char *s)
 	return (dest);
 }
 /*
-void test_strdup(const char *original) {
-    char *copy = strdup(original);
+int main(void)
+{
+    char *original = "Hello, world!";
+    char *copy;
 
-    if (copy == NULL) {
-printf("Test failed: strdup returned NULL for original: \"%s\"\n", original);
-        return;
+
+    copy = ft_strdup(original);
+    if (!copy)
+    {
+        printf("error allocating memory to duplicate string\n");
     }
+    printf("string original: %s\n", original);
+    printf("string duplicate: %s\n", copy);
+    free(copy);
 
-    // Testa se a cópia é igual à original
-    if (strcmp(original, copy) == 0) {
-        printf("Test passed: Original: \"%s\", Copy: \"%s\"\n", original, copy);
-    } else {
-        printf("Test failed: Original: \"%s\", Copy: \"%s\"\n", original, copy);
-    }
-
-    // Testa se a cópia é uma string diferente da original
-    if (copy != original) {
-        printf("Test passed: The copy is a different pointer than original.\n");
-    } else {
-        printf("Test failed: The copy points to the same memory as original.\n");
-    }
-
-    free(copy); // Libera a memória alocada
-}
-
-int main() {
-    // Testes com strings normais
-    test_strdup("Hello, World!");
-    test_strdup("C programming");
-    test_strdup("Testing strdup function");
-
-    // Testes com strings vazias
-    test_strdup("");
-
-    // Testes com strings que contêm espaços
-    test_strdup("   Leading and trailing spaces   ");
-
-    // Testes com caracteres especiais
-    test_strdup("Special characters: !@#$%^&*()_+");
-
-    // Teste com um ponteiro NULL
-    test_strdup(NULL); // Este teste deve ser tratado para evitar falha
-
-    return 0;
+    return (0);
 }
 */

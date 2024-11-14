@@ -35,12 +35,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int main(void)
 {
-    char *result;
+    const char *big = "Hello, World! Welcome to C programming.";
+    const char *little = "World";
+    size_t len = 20;
 
-    // Teste 1: Sub-string no início
-    printf("Test 1 - Sub-string no início:\n");
-    result = ft_strnstr("Hello World!", "Hello", 12);
-    printf(" esperado: Hello World!\nR: %s\n\n", result ? result : "NULL");
-    return 0;
+    char *result_ft = ft_strnstr(big, little, len);
+    if (result_ft)
+    	printf("substring '%s' found in: \"%s\"\n", little, result_ft);
+    else
+        printf("substring not found");
 }
 */

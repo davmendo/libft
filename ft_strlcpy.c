@@ -35,13 +35,16 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (l);
 }
 /*
-int	main(void)
+int main(void)
 {
-	char src[] = "davmendo";
-	char dst[20];
+    const char src[] = "Hello, World!";
+    char dst[20]; 
 
-	size_t l = ft_strlcpy(dst, src, 20);
-	printf("%s\nnumeros: %zu\n", dst, l);
-	return (0);
+    size_t copied_length = ft_strlcpy(dst, src, sizeof(dst));
+    printf("Fonte: %s\n", src);
+    printf("Destino após ft_strlcpy: %s\n", dst);
+    printf("Comprimento total da fonte: %zu\n", copied_length);
+
+    return 0;
 }
 */

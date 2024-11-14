@@ -28,11 +28,10 @@ void	*ft_memset(void *s, int c, size_t n)
 }
 /*
 int main() {
-    char buffer[50]; 
-    ft_memset(buffer, 'A', 30);
-    buffer[10] = '\0';
-    write(1, buffer, 31);
-    write(1, "\n", 1);
-    return 0;
+	char buffer[50]; 
+    	ft_memset(buffer, 'A', 30);
+    	buffer[10] = '\0';
+    	write(1, buffer, 31);
+    	return (0);
 }
 */
